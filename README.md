@@ -10,22 +10,30 @@
 
 ---
 
-## Background & The Business Story
-### Unlocking Hidden Growth Opportunities
+## System Overview
+#### OpenTicket and OpenInvoice Workflow
 
-At EMI (EnterMyInvoice), we automate field service ticket and invoice submissions for oil and gas suppliers delivering to corporate buyers. Submissions route through two main platforms owned by Enverus: OpenTicket and OpenInvoice. 
+At EMI (EnterMyInvoice), we automate field service ticket and invoice submissions for oil and gas suppliers delivering services to corporate buyers. These submissions are processed through two main platforms owned by Enverus: OpenTicket and OpenInvoice.
 
-In standard field operations, suppliers submit service tickets into OpenTicket. Once a ticket is approved, it can be flipped into an official invoice inside OpenInvoice. Suppliers have two ways to do this. They can log into the web portals and manually type in entries and flip tickets by hand, or they can use EMI's automated B2B service to process tickets and automatically flip approved tickets into OpenInvoice invoices.
+In a typical field operation, suppliers first submit service tickets through OpenTicket. After approval, these tickets can be converted into official invoices through OpenInvoice.
 
-Historically, our internal system only allowed my manager to see metrics for transactions processed through EMI and stored in our own database. He could analyze our own volume and success rates, but he had no visibility into broader supplier activity happening directly on the manual web portals. 
+Suppliers currently use two different approaches. Some suppliers manually create tickets and invoices through the web portals, while others use EMI's automated B2B service to process tickets and convert approved tickets into OpenInvoice invoices.
 
-He knew many suppliers still submitted or flipped tickets manually due to old habits, buyer preferences, or doubts about automated accuracy. However, because tickets often get disputed or canceled during manual entry, suppliers were wasting hours of payroll and delaying their own payments.
+## Business Problem
+#### Limited Visibility into Manual Portal Activity
 
-My manager realized we were missing major sales opportunities. He needed a way to track total manual portal volume across all suppliers, identify which specific supplier employees were manually typing in entries, and prove that EMI's automated service cuts approval lag times and dispute rates. He asked me to build a cross platform analytics system to answer these questions so our sales team could pitch B2B automation to existing clients.
+Historically, our internal system only tracked transactions processed through EMI and stored in our own database. This allowed my manager to analyze our automated submission volume and success rates, but it did not provide visibility into supplier activity happening directly through the manual web portals.
+
+Many suppliers continued using manual entry due to existing workflows, buyer preferences, or concerns about automation accuracy. However, manual submissions often created additional delays when tickets were disputed or canceled, requiring suppliers to spend extra time correcting entries and waiting for approval.
+
+#### Identifying Automation Opportunities
+My manager needed a way to understand the total volume of manual portal activity across suppliers, identify which supplier users were still entering data manually, and compare manual submissions against EMI automated submissions.
+
+I was asked to build a cross platform analytics system that combines data from OpenTicket and OpenInvoice. The goal was to help the sales team identify automation opportunities and provide suppliers with clear data on the benefits of switching to EMI's automated service.
 
 ---
 
-## Business Solution
+## Business Solution & Results
 
 To solve this, I built an automated reporting system connected directly to an interactive 5 page Amazon QuickSight dashboard. The dashboard gives executive leadership and sales teams complete visibility into manual versus automated submission habits.
 
