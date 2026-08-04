@@ -10,7 +10,8 @@
 
 ---
 
-## The Business Story: Unlocking Hidden Growth Opportunities
+## Background & The Business Story
+### Unlocking Hidden Growth Opportunities
 
 At EMI (EnterMyInvoice), we automate field service ticket and invoice submissions for oil and gas suppliers delivering to corporate buyers. Submissions route through two main platforms owned by Enverus: OpenTicket and OpenInvoice. 
 
