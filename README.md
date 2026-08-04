@@ -33,7 +33,7 @@ I was asked to build a cross platform analytics system that combines OpenTicket 
 
 ## Business Solution & Results
 
-To solve this, I built an automated reporting system connected directly to an interactive 5 page Amazon QuickSight dashboard. The dashboard gives executive leadership and sales teams complete visibility into manual versus automated submission habits.
+I built an automated reporting system connected directly to an interactive 5 page Amazon QuickSight dashboard. The dashboard gives executive leadership and sales teams complete visibility into manual versus automated submission habits.
 
 [![Watch Demo](https://img.shields.io/badge/▶️_Watch_the_B2B_QuickSight_Dashboard_Video_Demo-B1F6FC?style=for-the-badge)](https://youtu.be/5PW44m2eUOg)
 
