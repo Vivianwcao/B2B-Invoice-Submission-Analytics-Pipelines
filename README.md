@@ -35,11 +35,15 @@ I was asked to build a cross platform analytics system that combines OpenTicket 
 
 I built an automated reporting system connected directly to an interactive 5 page Amazon QuickSight dashboard. The dashboard gives executive leadership and sales teams complete visibility into manual versus automated submission habits.
 
-[![Watch Demo](https://img.shields.io/badge/▶️_Watch_the_B2B_QuickSight_Dashboard_Video_Demo-B1F6FC?style=for-the-badge)](https://youtu.be/5PW44m2eUOg)
+<p align="center">
+  <a href="https://youtu.be/5PW44m2eUOg">
+    <img src="https://img.shields.io/badge/▶️_Watch_the_B2B_QuickSight_Dashboard_Video_Demo-94f2a8?style=for-the-badge" alt="Watch Demo">
+  </a>
+</p>
 
 <p align="center">
   <a href="https://youtu.be/5PW44m2eUOg" target="_blank">
-    <img src="https://img.youtube.com/vi/5PW44m2eUOg/maxresdefault.jpg" alt="B2B QuickSight Dashboard Demo" width="100%" />
+    <img src="https://img.youtube.com/vi/5PW44m2eUOg/maxresdefault.jpg" alt="B2B QuickSight Dashboard Demo" width="80%" />
   </a>
 </p>
 
@@ -71,7 +75,9 @@ OpenTicket provides an automated mTLS API returning continuous JSON history obje
 
 I originally stored the data as Parquet files in S3 and queried it with Athena. As reporting requirements changed, adding new fields required backfilling Parquet files and updating Glue schemas. I migrated the storage layer to Amazon RDS running MySQL, making schema changes and SQL joins much easier.
 
-<img width="2736" height="3280" alt="Enverus_submission_analytics_pipeline" src="https://github.com/user-attachments/assets/28432562-dc66-4918-84f0-23372b816980" />
+<div align="center">
+  <img width="80%" alt="Enverus_submission_analytics_pipeline" src="https://github.com/user-attachments/assets/28432562-dc66-4918-84f0-23372b816980" />
+</div>
 
 ### Data Processing Steps
 
