@@ -11,7 +11,7 @@
 ---
 
 ## System Overview
-#### OpenTicket and OpenInvoice Workflow
+### OpenTicket and OpenInvoice Workflow
 
 At EMI (EnterMyInvoice), we automate field service ticket and invoice submissions for oil and gas suppliers delivering services to corporate buyers. These submissions are processed through two main platforms owned by Enverus: OpenTicket and OpenInvoice.
 
@@ -19,17 +19,17 @@ In a typical field operation, suppliers first submit service tickets through Ope
 
 Suppliers currently use two different approaches. Some suppliers manually create tickets and invoices through the web portals, while others use EMI's automated B2B service to process tickets and convert approved tickets into OpenInvoice invoices.
 
+Many existing suppliers continued using manual workflows due to existing habits, buyer preferences, or concerns about automation accuracy. However, manual submissions often resulted in additional delays when tickets were disputed or canceled, requiring suppliers to spend more time correcting entries and waiting for approval.
+
 ## Business Problem
-#### Limited Visibility into Manual Portal Activity
+### Missing Data from Manual Portal Submissions
 
-Historically, our internal system only tracked transactions processed through EMI and stored in our own database. This allowed my manager to analyze our automated submission volume and success rates, but it did not provide visibility into supplier activity happening directly through the manual web portals.
+Historically, our internal system only tracked transactions processed through EMI. My manager could see our automated submission volume and success rates, but we had no data on tickets and invoices that suppliers created manually through the OpenTicket and OpenInvoice web portals.
 
-Many suppliers continued using manual entry due to existing workflows, buyer preferences, or concerns about automation accuracy. However, manual submissions often created additional delays when tickets were disputed or canceled, requiring suppliers to spend extra time correcting entries and waiting for approval.
+### Identifying Automation Opportunities
+My manager wanted to understand how much work suppliers were still doing manually, which users were creating submissions by hand, and how much of that activity could potentially be moved to EMI's automated service.
 
-#### Identifying Automation Opportunities
-My manager needed a way to understand the total volume of manual portal activity across suppliers, identify which supplier users were still entering data manually, and compare manual submissions against EMI automated submissions.
-
-I was asked to build a cross platform analytics system that combines data from OpenTicket and OpenInvoice. The goal was to help the sales team identify automation opportunities and provide suppliers with clear data on the benefits of switching to EMI's automated service.
+I was asked to build a cross platform analytics system that combines OpenTicket and OpenInvoice data. The goal was to give the sales team clear data they could use with existing clients, show where EMI automation could reduce manual work, and help suppliers get their invoices approved and paid faster.
 
 ---
 
