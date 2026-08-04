@@ -19,15 +19,13 @@ In a typical field operation, suppliers first submit service tickets through Ope
 
 Suppliers currently use two different approaches. Some suppliers manually create tickets and invoices through the web portals, while others use EMI's automated B2B service to process tickets and convert approved tickets into OpenInvoice invoices.
 
-Many existing suppliers continued using manual workflows due to existing habits, buyer preferences, or concerns about automation accuracy. However, manual submissions often resulted in additional delays when tickets were disputed or canceled, requiring suppliers to spend more time correcting entries and waiting for approval.
-
-## Business Problem
-### Missing Data from Manual Portal Submissions
+### Business Problem
 
 Historically, our internal system only tracked transactions processed through EMI. My manager could see our automated submission volume and success rates, but we had no data on tickets and invoices that suppliers created manually through the OpenTicket and OpenInvoice web portals.
 
-### Identifying Automation Opportunities
-My manager wanted to understand how much work suppliers were still doing manually, which users were creating submissions by hand, and how much of that activity could potentially be moved to EMI's automated service.
+Many existing suppliers continued using manual workflows due to existing habits, buyer preferences, or concerns about automation accuracy. However, manual submissions often caused delays when tickets were disputed or canceled, requiring suppliers to spend additional time correcting entries and waiting for approval.
+
+My manager wanted to understand how much work suppliers were still doing manually, which supplier employees were creating submissions by hand, and how much of that activity could potentially be moved to EMI's automated service.
 
 I was asked to build a cross platform analytics system that combines OpenTicket and OpenInvoice data. The goal was to give the sales team clear data they could use with existing clients, show where EMI automation could reduce manual work, and help suppliers get their invoices approved and paid faster.
 
