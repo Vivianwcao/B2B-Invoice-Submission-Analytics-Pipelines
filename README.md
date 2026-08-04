@@ -62,7 +62,7 @@ Joining data across OpenTicket and OpenInvoice presented a unique technical chal
 
 Originally, I built the storage layer using Parquet files on S3 and Athena views. However, as business requirements evolved and my manager requested new tracking fields, managing mismatched schemas in Athena became slow and difficult. I migrated the entire data layer to Amazon RDS running MySQL, allowing us to run fast SQL join views and easily modify table schemas.
 
-<img width="2736" height="3280" alt="Enverus_submission_analytics_pipeline" src="https://github.com/user-attachments/assets/8d009d80-a6af-4a43-9805-619d1434389d" />
+<img width="2736" height="3280" alt="Enverus_submission_analytics_pipeline" src="https://github.com/user-attachments/assets/28432562-dc66-4918-84f0-23372b816980" />
 
 ### Data Processing Steps
 
