@@ -24,7 +24,7 @@ My manager realized we were missing major sales opportunities. He needed a way t
 
 ---
 
-## Business Solution: Executive QuickSight Dashboard
+## Business Solution: QuickSight Analytics Dashboard
 
 To solve this, I built a daily automated reporting system connected directly to an interactive 5 page Amazon QuickSight dashboard. The dashboard gives executive leadership and sales teams complete visibility into manual versus automated submission habits.
 
@@ -50,7 +50,7 @@ To solve this, I built a daily automated reporting system connected directly to 
 ### Business Results
 * **Direct Sales Enablement:** Every morning, the business owner and sales team use QuickSight refreshes to review manual entry habits. They use this data to contact suppliers, show them how much payroll is wasted on manual entry, and pitch them on switching to EMI's automated service.
 
-* **Quantified Cash Flow Acceleration:** The analytics proved that EMI's automation significantly cuts approval lag times and lowers dispute rates, showing suppliers that automation helps them get paid faster.
+* **Reduced Approval and Payment Delays:** The analytics proved that EMI's automation significantly cuts approval lag times and lowers dispute rates, showing suppliers that automation helps them get paid faster.
 
 * **User Level Habit Tracking:** Pulling creator names and emails from API payloads allows sales to isolate manual entry habits down to individual supplier employees, providing concrete figures during client calls.
 
@@ -58,9 +58,11 @@ To solve this, I built a daily automated reporting system connected directly to 
 
 ## Technical Architecture & Data Flow
 
-Joining data across OpenTicket and OpenInvoice presented a unique technical challenge because access methods differ significantly between the two systems. OpenTicket provides an automated mTLS API returning continuous JSON history objects. OpenInvoice offers no direct API, providing snapshot multi-row Excel reports downloaded via Power Automate into an S3 bucket.
+Joining data across OpenTicket and OpenInvoice presented a unique technical challenge because access methods differ significantly between the two systems. 
 
-Originally, I built the storage layer using Parquet files on S3 and Athena views. However, as business requirements evolved and my manager requested new tracking fields, managing mismatched schemas in Athena became slow and difficult. I migrated the entire data layer to Amazon RDS running MySQL, allowing us to run fast SQL join views and easily modify table schemas.
+OpenTicket provides an automated mTLS API returning continuous JSON history objects. OpenInvoice offers no direct API, providing snapshot multi-row Excel reports downloaded via Power Automate into an S3 bucket.
+
+I originally stored the data as Parquet files in S3 and queried it with Athena. As reporting requirements changed, adding new fields required backfilling Parquet files and updating Glue schemas. I migrated the storage layer to Amazon RDS running MySQL, making schema changes and SQL joins much easier.
 
 <img width="2736" height="3280" alt="Enverus_submission_analytics_pipeline" src="https://github.com/user-attachments/assets/28432562-dc66-4918-84f0-23372b816980" />
 
