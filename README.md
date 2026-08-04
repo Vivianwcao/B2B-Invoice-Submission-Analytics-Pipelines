@@ -24,7 +24,7 @@ My manager realized we were missing major sales opportunities. He needed a way t
 
 ---
 
-## Business Solution: Analytics Dashboard
+## Business Solution
 
 To solve this, I built an automated reporting system connected directly to an interactive 5 page Amazon QuickSight dashboard. The dashboard gives executive leadership and sales teams complete visibility into manual versus automated submission habits.
 
