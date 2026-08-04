@@ -48,7 +48,7 @@ To solve this, I built a daily automated reporting system connected directly to 
 * **Page 5: Joined View Table:** A unified spreadsheet view combining ticket and invoice line items via a `FULL OUTER JOIN` for client auditing and Excel exports.
 
 ### Business Results
-* **Direct Sales Enablement:** Every morning, the business owner and sales team use QuickSight refreshes to review manual entry habits. They use this data to contact suppliers, show them how much payroll is wasted on manual entry, and pitch them on switching to EMI's automated service.
+* **Direct Sales Enablement:** Every week, the business owner and sales team review the latest QuickSight dashboard to identify suppliers that still rely on manual entry. They use this data to show the time and payroll spent on manual processing and demonstrate the benefits of switching to EMI's automated service.
 
 * **Reduced Approval and Payment Delays:** The analytics proved that EMI's automation significantly cuts approval lag times and lowers dispute rates, showing suppliers that automation helps them get paid faster.
 
