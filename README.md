@@ -16,7 +16,7 @@ At EMI (EnterMyInvoice), we automate field service ticket and invoice submission
 
 In standard field operations, suppliers submit service tickets into OpenTicket. Once a ticket is approved, it can be flipped into an official invoice inside OpenInvoice. Suppliers have two ways to do this. They can log into the web portals and manually type in entries and flip tickets by hand, or they can use EMI's automated B2B service to process tickets and automatically flip approved tickets into OpenInvoice invoices.
 
-Historically, our internal system only allowed my manager to see metrics for transactions processed through EMI and stored in our own database. He could analyze our own volume and success rates, but he had zero visibility into broader supplier activity happening directly on the manual web portals. 
+Historically, our internal system only allowed my manager to see metrics for transactions processed through EMI and stored in our own database. He could analyze our own volume and success rates, but he had no visibility into broader supplier activity happening directly on the manual web portals. 
 
 He knew many suppliers still submitted or flipped tickets manually due to old habits, buyer preferences, or doubts about automated accuracy. However, because tickets often get disputed or canceled during manual entry, suppliers were wasting hours of payroll and delaying their own payments.
 
