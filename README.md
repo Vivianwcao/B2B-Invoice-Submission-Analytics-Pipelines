@@ -109,10 +109,10 @@ I originally stored the data as Parquet files in S3 and queried it with Athena. 
 
 * **The Solution:** Built an `ON DUPLICATE KEY UPDATE` query that checks the incoming `last_action_timestamp`. Incoming fields are only overwritten if the incoming record's timestamp is newer than what is currently stored in the database.
 
-### 4. Avoiding deadlocks with staging tables
-* **The Challenge:** A secondary Lambda processes S3 JSON files to update `invoice_number` values on existing ticket rows. Because multiple workers run in parallel, updating the main database table simultaneously risked deadlocks or race conditions.
+### 4. Batch updating existing rows without an ORM
+* **The Challenge:** When a ticket gets invoiced, the `invoice_number` field on an existing row needs to be updated. The challenge is that one Lambda invocation processes a batch of up to 10 JSON files at once, each potentially containing different `invoice_number` values for different receipts. There is no clean way to express “update these 50 rows, each with a different value” in a single SQL statement without first staging the data somewhere. The naive approach of looping row by row and running one `UPDATE` per row works but is slow, connection-heavy, and holds the transaction open longer than necessary.
 
-* **The Solution:** Implemented a temporary staging table pattern. Each worker Lambda generates a uniquely named temporary staging table (`staging_{request_id}`), writes its local batch updates there, runs an update join against the main table, and drops the staging table inside a `finally` block to guarantee cleanup even if an error occurs.
+* **The Solution:** Implemented a temporary staging table pattern: each worker dumps its entire batch into a uniquely named temporary table (`staging_{request_id}`), then runs a single `UPDATE ... JOIN` that matches rows by `receipt_id` and applies all changes in one SQL operation. The unique name per invocation ensures parallel workers never read each other’s staging data, since each worker operates on its own isolated table. The staging table is dropped in a `finally` block so cleanup is guaranteed even if the update fails midway.
 
 ### 5. Handling mTLS certificates in Lambda
 * **The Challenge:** The OpenTicket API requires client certificate authentication. The certificate and private key are stored securely in SSM Parameter Store, but the Python `requests` library requires actual file paths for its SSL configuration, not raw text strings.
